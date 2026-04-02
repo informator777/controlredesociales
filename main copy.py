@@ -4,28 +4,8 @@ from oauth2client.service_account import ServiceAccountCredentials
 import pandas as pd
 import os
 
-
-# --- INTERRUPTOR DE CONCURSO ---
-CONCURSO_ACTIVO = False  # Cambia a True si necesitas reactivarlo
-
-if not CONCURSO_ACTIVO:
-    st.set_page_config(page_title="Concurso Finalizado", page_icon="🧡")
-    st.warning("### 🧡 ¡Gracias por tu participación!")
-    st.image("revilla_porlapaz.jpg", width=200)
-    st.balloons() # Un toque de agradecimiento
-    st.markdown("""
-    ## **El Concurso "¡Yo apoyo a Luis!" ha finalizado.**
-    
-    El periodo de registro de cuentas ha concluido exitosamente. 
-    Mantente atento a nuestras redes sociales para el anuncio de los ganadores.
-    
-    **¡Gracias por ser parte de Alianza Patria Sol!**
-    """)
-    st.stop()  # <--- ESTO DETIENE TODO EL CÓDIGO DE ABAJO
-
-
 # --- CONFIGURACIÓN DE PÁGINA ---
-st.set_page_config(page_title="Registro Redes Digitales Concurso:  ¡Yo apoyo a Luis", page_icon="🧡", layout="centered")
+st.set_page_config(page_title="Registro Redes Digitales Concurso:  ¡Yo apoyo a Luis Revilla!", page_icon="🧡", layout="centered")
 
 # --- FUNCIONES DE APOYO (Definidas antes de la interfaz) ---
 def conectar_hoja():
