@@ -17,9 +17,7 @@ if not CONCURSO_ACTIVO:
     ## **El Concurso "¡Yo apoyo a Luis!" ha finalizado.**
     
     El periodo de registro de cuentas ha concluido exitosamente. 
-    Mantente atento a nuestras redes sociales para el anuncio de los ganadores.
     
-    **¡Gracias por ser parte de Alianza Patria Sol!**
     """)
     st.stop()  # <--- ESTO DETIENE TODO EL CÓDIGO DE ABAJO
 
