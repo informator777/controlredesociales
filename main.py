@@ -5,7 +5,7 @@ import pandas as pd
 import os
 
 # --- CONFIGURACIÓN DE PÁGINA ---
-st.set_page_config(page_title="Registro Redes Digitales", page_icon="🧡", layout="centered")
+st.set_page_config(page_title="Registro Redes Digitales Concurso:  ¡Yo apoyo a Luis Revilla!", page_icon="🧡", layout="centered")
 
 # --- FUNCIONES DE APOYO (Definidas antes de la interfaz) ---
 def conectar_hoja():
@@ -55,13 +55,13 @@ with st.form("registro_form", clear_on_submit=True):
     col1, col2 = st.columns(2)
     with col1:
         nombre = st.text_input("Nombre Completo")
-        edad = st.number_input("Edad", min_value=15, max_value=95, step=1)
+        #edad = st.number_input("Edad", min_value=15, max_value=95, step=1)
     with col2:
         telefono = st.text_input("Teléfono / WhatsApp")
-        area = st.selectbox("Área", ["Urbano", "Rural"])
+        #area = st.selectbox("Área", ["Urbano", "Rural"])
     
     # Fila 2: Grupo de WhatsApp
-    grupo_wa = st.selectbox("Grupo WhatsApp (Distrito)", lista_grupos)
+    grupo_wa = st.selectbox("Grupo WhatsApp", lista_grupos)
 
     st.markdown("---")
     
@@ -103,7 +103,7 @@ with st.form("registro_form", clear_on_submit=True):
                 if sheet:
                     estado_auto = "Registrada"
                     # Estructura de la fila: Personales + 5 FB + 5 TK + Estado
-                    fila = [nombre, edad, area, telefono, grupo_wa] + fb_urls + tk_urls + [estado_auto]
+                    fila = [nombre, telefono, grupo_wa] + fb_urls + tk_urls + [estado_auto]
                     
                     try:
                         sheet.append_row(fila)
@@ -115,4 +115,4 @@ with st.form("registro_form", clear_on_submit=True):
             st.warning("⚠️ El nombre y el teléfono son obligatorios.")
 
 # Pie de página fuera del formulario
-st.markdown("<p style='text-align: center; color: orange; font-size: 0.9em;'><b>Sistema de Registro Digital v2.0 - Alianza Patria Sol</b></p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; color: orange; font-size: 0.9em;'><b>Sistema de Registro Digital v1.0 - Alianza Patria Sol- Revilla Por La Paz</b></p>", unsafe_allow_html=True)
